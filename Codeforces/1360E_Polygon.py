@@ -7,12 +7,13 @@ for t in range(T):
     
     row = 0
     while row < n:
-        data = input().rstrip().split()
+        data = input().rstrip()
+        temp = []
         i=0
         while i<n:
-            data[i] = int(data[i])
+            temp.append(int(data[i]))
             i+=1
-        M.append(data)
+        M.append(temp)
         row+=1
     
     exit=False
@@ -26,6 +27,7 @@ for t in range(T):
                     if M[row+1][col]!=1 and M[row][col+1]!=1:
                         print("NO")
                         exit=True
+                        break
                 M[row][col]=0
             col+=1
         if exit:
