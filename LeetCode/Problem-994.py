@@ -56,4 +56,5 @@ class Solution:
             ans = -1
             for r in range(rows):
                 for c in range(cols):
-                    ans = ans if ans 
+                    ans = ans if ans >= new_grid[r][c] else new_grid[r][c]
+            return ans
